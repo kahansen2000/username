@@ -1,12 +1,13 @@
 #! /bin/bash
 # zip.sh
-echo "Enter a five-digit ZIP code: "
-read ZIP
-while echo $ZIP | egrep -v "^[0-9]{5}$" > /dev/null 2>&1
+echo "Enter a username: "
+echo "The username must contain 3-12 characters, begin with a letter, and only contain lowercase letters, numbers, and _ chatacters"
+read username
+while echo $username | egrep -v "^[a-z][a-z0-9_]{3-12}$" > /dev/null 2>&1
 do
-	echo "You must enter a valid ZIP code - five digits only!"
-	echo "Enter a five-digit ZIP code: "
-	read ZIP
+	echo "Enter a valid username: "
+	echo "The username must contain 3-12 characters, begin with a letter, and only contain lowercase letters, numbers, and _ chatacters
+	read username
 done
 echo "Thank you"
 
